@@ -180,9 +180,18 @@ The system follows a **Decoupled MERN Architecture**:
 
 ## 14. Deployment
 
-*   **Frontend Ecosystem:** Deployed to **Vercel** for high-tier CDN and Edge performance.
-*   **Backend Infrastructure:** Hosted on **Render** with auto-scale capabilities.
-*   **Database Cloud:** **MongoDB Atlas** with a global cluster configuration.
+### Backend Infrastructure (Production)
+- **Status:** Live on Render
+- **URL:** `https://talentbridge-backend-ar54.onrender.com`
+- **Port Mapping:** `10000` (Dynamic)
+
+### Frontend Infrastructure (Static)
+- **Status:** Live via Render Static Site
+- **API Synchronization:** Managed via `VITE_API_BASE_URL`
+
+### Database Cloud
+- **Cloud Provider:** MongoDB Atlas
+- **Topology:** Global Sharded Cluster (M0 Free Tier)
 
 ---
 

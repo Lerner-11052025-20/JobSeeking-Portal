@@ -38,8 +38,11 @@ git clone https://github.com/Lerner-11052025-20/JobSeeking-Portal.git
 cd JobSeeking-Portal
 ```
 
-### 2. Backend Environment
-Navigate to the `backend` folder and create a `.env` file:
+### 2. Backend Environment (Production: Render)
+- **Production URL:** `https://talentbridge-backend-ar54.onrender.com`
+- **Root Directory:** `backend`
+
+Create a `.env` file in the `backend` directory:
 ```env
 MONGO_URI=your_mongodb_atlas_uri
 JWT_SECRET=your_secure_secret
@@ -47,7 +50,8 @@ CLOUDINARY_CLOUD_NAME=your_name
 CLOUDINARY_API_KEY=your_key
 CLOUDINARY_API_SECRET=your_secret
 OPENROUTER_API_KEY=your_gemini_key
-PORT=5000
+CORS_ORIGIN=https://talentbridge-frontend.onrender.com (Change to your frontend)
+PORT=10000
 ```
 ```bash
 cd backend
@@ -55,10 +59,13 @@ npm install
 npm start
 ```
 
-### 3. Frontend Environment
-Navigate to the `frontend` folder and create a `.env` file:
+### 3. Frontend Environment (Production: Render)
+- **Root Directory:** `frontend`
+- **Publish Directory:** `dist`
+
+Create a `.env` file in the `frontend` directory:
 ```env
-VITE_API_BASE_URL=http://localhost:5000
+VITE_API_BASE_URL=https://talentbridge-backend-ar54.onrender.com/api
 ```
 ```bash
 cd frontend
