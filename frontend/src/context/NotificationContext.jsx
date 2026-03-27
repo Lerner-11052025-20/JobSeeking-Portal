@@ -13,9 +13,14 @@ export const NotificationProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      // Connect to Socket.io
-      const newSocket = io('/', {
-        query: { userId: user._id }
+      // Connect to Socket.io - Point to the production backend URL
+      const backendUrl = import.meta.env.VITE_API_BASE_URL || '';
+      const socketOrigin = backendUrl.replace('/api', '') || window.location.origin;
+      
+      const newSocket = io(socketOrigin, {
+        query: { userId: user._id },
+        transports: ['websocket', 'polling'], // Support both for Render stability
+        withCredentials: true
       });
 
       setSocket(newSocket);
