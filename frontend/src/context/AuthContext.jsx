@@ -3,8 +3,14 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
+const getBaseURL = () => {
+  const url = import.meta.env.VITE_API_BASE_URL || '';
+  if (!url) return '/api';
+  return url.endsWith('/api') ? url : `${url}/api`;
+};
+
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
+  baseURL: getBaseURL(),
   withCredentials: true,
 });
 
