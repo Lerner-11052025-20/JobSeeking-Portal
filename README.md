@@ -97,6 +97,8 @@ The platform utilizes a surgical **Signature Black** palette (`#08070B`) accente
 ## 📜 Documentation
 Full technical documentation covering system architecture, database schemas, and UI/UX decisions is available in the **[Technical Documentation](./talentbridge_v2_documentation.md.resolved)** module.
 
+THANK YOU....
+
 ---
 
 ## 📄 License
