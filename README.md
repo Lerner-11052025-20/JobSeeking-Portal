@@ -19,7 +19,7 @@ TalentBridge is an enterprise-grade, full-stack Job Portal built to redefine the
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology TECH STACK
 
 | Layer | Technologies |
 | :--- | :--- |
